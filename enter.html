@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Abyss</title>
+    <style>
+        body {
+            background: black;
+            color: white;
+            font-family: 'Courier New', monospace;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            text-shadow: 0 0 5px red, 0 0 10px red, 0 0 20px red;
+            animation: flicker 1.5s infinite;
+        }
+
+        p {
+            font-size: 1.5em;
+            text-align: center;
+            margin-top: 50px;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .return {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .return a {
+            color: red;
+            font-size: 24px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .return a:hover {
+            color: yellow;
+        }
+
+        #audio {
+            display: none;
+        }
+    </style>
+</head>
+<body onload="playAudio()">
+    <h1>WELCOME TO THE VOID</h1>
+    <p>
+        The shadows have claimed you. Your data is no longer your own.  
+        **Prepare for the ultimate truth.**  
+    </p>
+    <div class="return">
+        <a href="index.html">Return to Safety</a>
+    </div>
+
+    <audio id="audio" autoplay loop>
+        <source src="eerie_sound.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        function playAudio() {
+            var audio = document.getElementById('audio');
+            audio.play();
+        }
+    </script>
+</body>
+</html>
