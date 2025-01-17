@@ -1,0 +1,3 @@
+[submodule "akira"]
+    path = akira
+    url = https://github.com/NexGenCrypt/akira.git
