@@ -3,77 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akira - Enter the Abyss</title>
+    <title>Akira</title>
     <style>
-        /* Reset body styles */
         body {
             margin: 0;
             padding: 0;
-            background-color: #000000; /* Pure black background */
-            font-family: 'Courier New', monospace; /* Professional hacker-style font */
-            color: #00ff00; /* Neon green text for hacker feel */
-            text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00; /* Glow effect for text */
-        }
-
-        /* Header styles */
-        .header {
+            background-color: black;
+            color: #00FF00;
+            font-family: "Courier New", Courier, monospace;
             text-align: center;
-            padding: 50px;
-            font-size: 3em;
-            text-transform: uppercase;
-            font-weight: bold;
         }
-
-        /* Main content styles */
+        header {
+            padding: 20px;
+            background: linear-gradient(to bottom, #000000, #1a1a1a);
+            box-shadow: 0 4px 8px rgba(0, 255, 0, 0.3);
+        }
+        header h1 {
+            font-size: 50px;
+            letter-spacing: 5px;
+            text-shadow: 0 0 20px #00FF00;
+        }
+        img {
+            margin-top: 30px;
+            width: 400px;
+            height: auto;
+            border: 2px solid #00FF00;
+            box-shadow: 0 0 30px #00FF00;
+        }
         .content {
-            text-align: center;
-            font-size: 1.2em;
-            margin-top: 20px;
+            padding: 30px;
+            font-size: 18px;
+            line-height: 1.8;
         }
-
-        .content a {
-            color: #ff0000; /* Red links */
+        footer {
+            padding: 20px;
+            background: #1a1a1a;
+            color: #808080;
+            font-size: 14px;
+        }
+        footer p {
+            margin: 0;
+        }
+        footer a {
+            color: #00FF00;
             text-decoration: none;
-            transition: 0.3s;
         }
-
-        .content a:hover {
-            color: #ffff00; /* Yellow hover effect for links */
-        }
-
-        /* Dark Web Warning styles */
-        .warning {
-            color: #ff0000; /* Red warning */
-            font-size: 1.5em;
-            margin-top: 20px;
-            font-weight: bold;
-            text-transform: uppercase;
-            text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
-        }
-
-        /* Footer styles */
-        .footer {
-            text-align: center;
-            margin-top: 50px;
-            font-size: 1.5em;
-            color: #ff0000;
-            text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000; /* Red glowing effect */
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        Akira
-    </div>
+    <header>
+        <h1>AKIRA</h1>
+    </header>
+
     <div class="content">
-        <p>Welcome to the Dark Web. Feel the toxicity of the code.</p>
-        <p><a href="#">Enter</a> | <a href="#">Exit</a></p>
+        <p>The walls are closing in. They know you're here... there's no escape now.</p>
+        <img src="images/eye_image.png" alt="The Eye of the Abyss">
+        <p>
+            WARNING: You have entered a place where the rules of the surface world do not apply. 
+            Here, anonymity is an illusion, and the shadows never forget. 
+            Once you cross this threshold, there is no turning back. Data is forever. 
+            Beware the eye that watches from the abyss.
+        </p>
     </div>
-    <div class="warning">
-        WARNING: You have entered a place where the rules of the surface world do not apply. Here, anonymity is an illusion, and the shadows never forget. Once you cross this threshold, there is no turning back. Data is forever. Beware the eye that watches from the abyss.
-    </div>
-    <div class="footer">
-        We Are Watching You
-    </div>
+
+    <footer>
+        <p>We Are Watching You</p>
+        <p><a href="https://github.com/NexGenCrypt/Akira">View on GitHub</a></p>
+    </footer>
 </body>
 </html>
