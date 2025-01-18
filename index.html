@@ -5,72 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AKIRA</title>
     <style>
-        body {
-            background: black;
-            color: white;
-            font-family: 'Courier New', Courier, monospace;
-            text-align: center;
+        /* General Reset */
+        body, html {
             margin: 0;
             padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Courier New', Courier, monospace;
+            color: #e0e0e0;
+            background: url('eye_image.png') no-repeat center center fixed;
+            background-size: cover;
         }
-        h1 {
-            color: lime;
-            font-size: 4rem;
-            margin-top: 20px;
-            text-shadow: 0 0 10px lime, 0 0 20px lime;
-        }
-        p {
-            font-size: 1.2rem;
-            text-shadow: 0 0 10px red;
-        }
-        .warning {
-            color: red;
-            font-size: 1.5rem;
-            margin: 20px 0;
-            text-shadow: 0 0 10px red, 0 0 20px red;
-        }
-        .button-container {
-            margin: 30px;
-        }
-        .button {
-            display: inline-block;
-            padding: 15px 30px;
-            margin: 10px;
-            font-size: 1.2rem;
-            color: white;
-            background: lime;
-            border: none;
-            cursor: pointer;
-            text-decoration: none;
-            text-shadow: 0 0 10px black;
-            box-shadow: 0 0 10px lime;
-        }
-        .button:hover {
-            background: red;
-            box-shadow: 0 0 10px red;
-        }
-        .dark-images {
-            margin: 30px auto;
-            width: 80%;
-        }
-        .dark-images img {
+
+        /* Overlay for Dark Vibes */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            max-width: 600px;
-            margin: 20px 0;
-            box-shadow: 0 0 20px red;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85); /* Dark overlay to emphasize text */
+            z-index: 0;
+        }
+
+        /* Centered Container */
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Title */
+        h1 {
+            font-size: 4rem;
+            color: #FFFFFF;
+            margin: 0;
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
+            text-shadow: 0 0 5px #FFFFFF, 0 0 15px #FFFFFF;
+        }
+
+        /* Subtitle */
+        p.subtitle {
+            font-size: 1.5rem;
+            color: #AAAAAA;
+            margin: 10px 0 30px;
+            letter-spacing: 0.1rem;
+        }
+
+        /* Articles */
+        .dark-articles {
+            margin: auto;
+            padding: 20px;
+            max-width: 800px;
+            background: rgba(20, 20, 20, 0.95);
+            border: 1px solid #333333;
+            box-shadow: 0 0 10px #000000;
+            text-align: left;
+        }
+
+        .dark-articles h2 {
+            font-size: 1.8rem;
+            color: #FF0000;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #333333;
+            padding-bottom: 5px;
+        }
+
+        .dark-articles p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #CCCCCC;
+        }
+
+        /* Footer */
+        footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 1rem;
+            color: #666666;
+        }
+
+        /* Subtle Fade-In Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        h1, .dark-articles, footer {
+            animation: fadeIn 2s ease-in-out;
         }
     </style>
 </head>
 <body>
-    <h1>AKIRA</h1>
-    <p>The walls are closing in. They know you're here... there's no escape now.</p>
-    <div class="button-container">
-        <a href="articles.html" class="button">Articles</a>
-        <a href="#" class="button">Exit</a>
+    <div class="content">
+        <h1>AKIRA</h1>
+        <p class="subtitle">The walls are closing in. There is no escape.</p>
+        
+        <div class="dark-articles">
+            <h2>The Whisper</h2>
+            <p>It begins as a faint sound, so quiet you question if it’s real. But then it grows louder, persistent, like something breathing behind you. The air grows cold. You turn around... and there's nothing there—but you know it’s watching.</p>
+
+            <h2>Shadows in the Digital Void</h2>
+            <p>You think the digital world is safe? The shadows in the void see everything—every move, every mistake. They are patient, waiting for you to slip, to go just a little deeper. Once you do, there’s no turning back.</p>
+        </div>
     </div>
-    <p class="warning">WARNING: YOU HAVE ENTERED A PLACE WHERE THE RULES OF THE SURFACE WORLD DO NOT APPLY.</p>
-    <div class="dark-images">
-        <img src="images/eye_image.png" alt="Dark Web Eye Image">
-    </div>
+    
+    <footer>
+        <p>Beware the eye that sees everything.</p>
+    </footer>
 </body>
 </html>
